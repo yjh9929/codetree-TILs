@@ -11,4 +11,6 @@ for i in range(len(restaurant)):
     restaurant[i] -= headT
     if restaurant[i] > 0:
         min_memT = restaurant[i] // memT
-    minT += min_memT + 1
+        min_memT += 1
+    minT += min_memT
+print(minT)
