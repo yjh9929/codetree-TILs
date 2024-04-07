@@ -12,7 +12,9 @@ def solve(left_day, total_money, now):
         if left_day >= t:
             total_money[now] += p
             left_day -= t
-            solve(left_day - t, total_money, now)
+            if left_day <= 0:
+                break
+    return total_money
 for b in range(n):
     solve(n - b, total_money, b)
 print(max(total_money))
